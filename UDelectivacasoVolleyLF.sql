@@ -47,18 +47,18 @@ CREATE TABLE Buzon
     id_carta Integer NOT NULL
 );
 
+CREATE TABLE LlamadaVerificacion
+(
+    telefono_cliente Integer NOT NULL,
+    datos_faltantes String NOT NULL
+);
+
 CREATE TABLE Persona
 (
     nombre String NOT NULL,
     apellido String NOT NULL,
     fechadenacimiento String NOT NULL,
     edad Integer NOT NULL
-);
-
-CREATE TABLE LlamadaVerificacion
-(
-    telefono_cliente Integer NOT NULL,
-    datos_faltantes String NOT NULL
 );
 
 CREATE TABLE RegistroMiembros
@@ -70,6 +70,12 @@ CREATE TABLE RegistroMiembros
     estado Boolean NOT NULL
 );
 
+CREATE TABLE MontoAnual
+(
+    Anio Integer NOT NULL,
+    Monto Integer NOT NULL
+);
+
 CREATE TABLE Factura
 (
     id_miembro Integer NOT NULL,
@@ -77,11 +83,5 @@ CREATE TABLE Factura
     tarifa_pagar Integer NOT NULL,
     numero_correo_entrante Integer NOT NULL,
     dir_destinatario String NOT NULL
-);
-
-CREATE TABLE MontoAnual
-(
-    Anio Integer NOT NULL,
-    Monto Integer NOT NULL
 );
 
